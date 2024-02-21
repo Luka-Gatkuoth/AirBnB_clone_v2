@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Starts the Flask web application.
+"""Start the Flask web application.
 
 The application listens on 0.0.0.0, port 5000.
 Routes:
@@ -14,9 +14,9 @@ app = Flask(__name__)
 
 @app.route("/cities_by_states", strict_slashes=False)
 def cities_by_states():
-    """Displays an HTML page with a list of all states and related cities.
+    """Display an HTML page with a list of all states and related cities.
 
-    States/cities are sorted by name.
+    States/cities are sorted by the name.
     """
     states = storage.all("State")
     return render_template("8-cities_by_states.html", states=states)

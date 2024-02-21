@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Starts the Flask web application.
+"""Start the Flask web application.
 
 The application listens on 0.0.0.0, port 5000.
-Routes:
+Route:
     /states_list: HTML page with a list of all State objects in DBStorage.
 """
 from models import storage
@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route("/states_list", strict_slashes=False)
 def states_list():
-    """Displays an HTML page with a list of all State objects in DBStorage.
+    """Display an HTML page with the list of all State objects in DBStorage.
 
     States are sorted by name.
     """

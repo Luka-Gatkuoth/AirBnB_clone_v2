@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Start a Flask web application.
+"""Start the Flask web applications.
 
 The application listen on 0.0.0.0, port 5000.
 Routes:

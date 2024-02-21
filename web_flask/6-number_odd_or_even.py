@@ -46,9 +46,9 @@ def c(text):
 @app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def python(text="is cool"):
-    """Displays 'Python' followed by the value of <text>
+    """Display 'Python' followed by the value of the <text>
 
-    Replaces any underscores in <text> with slashes.
+    Replace any underscores in <text> with the slashes.
     """
     text = text.replace("_", " ")
     return "Python {}".format(text)
@@ -56,7 +56,7 @@ def python(text="is cool"):
 
 @app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
-    """Displays 'n is a number' only if <n> is an integer."""
+    """Display 'n is a number' only if <n> is an integer."""
     return "{} is a number".format(n)
 
 
@@ -64,14 +64,14 @@ def number(n):
 def number_template(n):
     """Displays an HTML page only if <n> is an integer.
 
-    Displays the value of <n> in the body.
+    Display value of <n> in the body.
     """
     return render_template("5-number.html", n=n)
 
 
 @app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
 def number_odd_or_even(n):
-    """Displays an HTML page only if <n> is an integer.
+    """Display an HTML page only if <n> is an integer.
 
     States whether <n> is odd or even in the body.
     """
