@@ -10,10 +10,10 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route("/", strict_slashes=False)
+@app.route("/airbnb-onepage", strict_slashes=False)
 def hello():
     """Displays 'Hello HBNB!'"""
-    return render_template("10-hbnb_filters.py")
+    return "Hello HBNB!"
 
 
 if __name__ == "__main__":
